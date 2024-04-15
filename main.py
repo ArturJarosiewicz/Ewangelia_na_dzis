@@ -1,25 +1,23 @@
-import requests
-import selectorlib
+import functions
 
 URL = "https://opoka.org.pl/liturgia"
 
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+scrapped = functions.scrape(URL)
+extracted = functions.extract(scrapped)
+# print(extracted)
 
+message = f"""\
+Subject: Ewangelia na dziś
+Pierwsze czytanie
+{extracted['Pierwsze czytanie ksiega']}
 
-def scrape(url):
-    response = requests.get(url, headers=HEADERS)
-    source = response.text
-    return source
+{extracted['Pierwsze czytanie']}
 
+-------------------------------------------------
+Ewangelia
+{extracted['Ewangelia ksiega']}
 
-def extract(source):
-    extractor = selectorlib.Extractor.from_yaml_file('extract.yaml')
-    value = extractor.extract(source)
-    return value
+{extracted['Ewangelia']}
+"""
 
-
-if __name__ == "__main__":
-    scrapped = scrape(URL)
-    extracted = extract(scrapped)
-    print(extracted)
+functions.send_email(message)
