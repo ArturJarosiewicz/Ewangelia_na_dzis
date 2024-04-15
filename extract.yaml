@@ -1,0 +1,15 @@
+Pierwsze czytanie ksiega:
+      css: "#w > div:nth-child(3) > div > div > div > div.app_document.doc_type_lit > div.liturgia-wrapper > div.lit-right > div > div.subsec.czyt1 > div.siglum"
+      type: Text
+
+Pierwsze czytanie:
+      css: ".komentarz-wrapper p, .app_document.doc_type_lit .sekcja.dwa .subsec.czyt1 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt2 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt3 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt4 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt5 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt6 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt7 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt8 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt9 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.czyt10 div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.ewangelia div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.psalm div:not(.siglum):not(h2), .app_document.doc_type_lit .sekcja.dwa .subsec.werset div:not(.siglum):not(h2)"
+      type: Text
+
+Ewangelia ksiega:
+      css: "#w > div:nth-child(3) > div > div > div > div.app_document.doc_type_lit > div.liturgia-wrapper > div.lit-right > div > div.subsec.ewangelia > div.siglum"
+      type: Text
+
+Ewangelia:
+      css: "#w > div:nth-child(3) > div > div > div > div.app_document.doc_type_lit > div.liturgia-wrapper > div.lit-right > div > div.subsec.ewangelia > div:nth-child(3)"
+      type: Text
