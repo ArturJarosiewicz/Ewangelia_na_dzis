@@ -1,6 +1,7 @@
 import requests
 import selectorlib
 import smtplib, ssl
+import os
 
 
 HEADERS = {
@@ -24,7 +25,7 @@ def send_email(message):
     port = 465
 
     username = "apollonascie@gmail.com"
-    password = "eurl icji vpan kkcx"
+    password = os.getenv("EMAIL_PASS")
 
     receiver = "artur.jarosiewicz6@gmail.com"
     context = ssl.create_default_context()
