@@ -1,4 +1,5 @@
 import functions
+from datetime import datetime
 
 URL = "https://opoka.org.pl/liturgia"
 
@@ -7,7 +8,7 @@ extracted = functions.extract(scrapped)
 # print(extracted)
 
 message = f"""\
-Subject: Ewangelia na dziś
+Subject: Ewangelia na dzień {datetime.today().strftime("%d-%m")}
 Pierwsze czytanie
 {extracted['Pierwsze czytanie ksiega']}
 
